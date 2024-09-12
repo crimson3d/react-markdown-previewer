@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { marked } from 'marked';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import './App.css';
+import React, { useState } from "react";
+import { marked } from "marked";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import "./App.css";
 
 const defaultMarkdown = `# Welcome to my React Markdown Previewer!
 
@@ -66,14 +66,26 @@ function App() {
   };
 
   return (
-    <div className={`container-fluid ${isEditorMaximized ? 'editor-maximized' : ''} ${isPreviewerMaximized ? 'previewer-maximized' : ''}`}>
+    <div
+      className={`container-fluid ${
+        isEditorMaximized ? "editor-maximized" : ""
+      } ${isPreviewerMaximized ? "previewer-maximized" : ""}`}
+    >
       <div className="row h-100">
-        <div className={`col ${isEditorMaximized ? 'col-12' : 'col-6'} p-0 h-100`}>
+        <div
+          className={`col ${isEditorMaximized ? "col-12" : "col-6"} p-0 h-100`}
+        >
           <div className="card h-100">
             <div className="card-header d-flex justify-content-between align-items-center">
               <h5 className="mb-0">Editor</h5>
               <button onClick={toggleEditorMaximized} className="btn btn-light">
-                <i className={`bi ${isEditorMaximized ? 'bi-arrows-angle-contract' : 'bi-arrows-angle-expand'}`}></i>
+                <i
+                  className={`bi ${
+                    isEditorMaximized
+                      ? "bi-arrows-angle-contract"
+                      : "bi-arrows-angle-expand"
+                  }`}
+                ></i>
               </button>
             </div>
             <div className="card-body p-0">
@@ -85,18 +97,29 @@ function App() {
             </div>
           </div>
         </div>
-        <div className={`col ${isPreviewerMaximized ? 'col-12' : 'col-6'} p-0 h-100`}>
+        <div
+          className={`col ${
+            isPreviewerMaximized ? "col-12" : "col-6"
+          } p-0 h-100`}
+        >
           <div className="card h-100">
             <div className="card-header d-flex justify-content-between align-items-center">
               <h5 className="mb-0">Previsualización</h5>
-              <button onClick={togglePreviewerMaximized} className="btn btn-light">
-                <i className={`bi ${isPreviewerMaximized ? 'bi-arrows-angle-contract' : 'bi-arrows-angle-expand'}`}></i>
+              <button
+                onClick={togglePreviewerMaximized}
+                className="btn btn-light"
+              >
+                <i
+                  className={`bi ${
+                    isPreviewerMaximized
+                      ? "bi-arrows-angle-contract"
+                      : "bi-arrows-angle-expand"
+                  }`}
+                ></i>
               </button>
             </div>
             <div className="card-body p-3">
-              <div
-                dangerouslySetInnerHTML={{ __html: marked(markdown) }}
-              />
+              <div dangerouslySetInnerHTML={{ __html: marked(markdown) }} />
             </div>
           </div>
         </div>
