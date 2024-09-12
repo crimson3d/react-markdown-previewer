@@ -1,0 +1,26 @@
+.editor-maximized .col-6,
+.previewer-maximized .col-6 {
+  display: none;
+}
+
+.editor-maximized .col-12,
+.previewer-maximized .col-12 {
+  display: block;
+}
+
+.card-body {
+  overflow-y: auto;
+}
+
+.form-control {
+  border: none;
+  resize: none;
+}
+
+.h-100 {
+  height: 100vh;
+}
+
+.container-fluid {
+  height: 100vh;
+}
